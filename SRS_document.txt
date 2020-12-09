@@ -1,0 +1,179 @@
+Title:							ONLINE PANDIT/PRIEST BOOKING
+
+group members: 					Ankit Gite, Vishwajeet latpate, Arnav Bhargava
+
+List of Actors: 				Priests, Customer(End-user)
+
+
+Purpose:
+								This document is meant to delineate the features of OPB, so as to
+								serve as a guide to the developers on one hand and a software
+								validation document for the prospective client on the other.
+					
+								Online Pandit/Priest Booking (OPB) has a vision to help the people 
+								for finding Pandit/Priest according to their location, for any occasion 
+								they want. OPB provides facility to book a priest sitting at home for 
+								occasions like wedding,puja-hawan,vastu pujan and many more. 
+								The end user has to go to the website and just book a priest, 
+								all the information about the priest (including dakshina) will be sent 
+								to user once the booking is done. For cancellation of booking and to get 
+								refund ,certain criteria should be followed.
+
+
+Scope:							OPB gives freedom to end-user to choose any priest from the portal, 
+								and then they can book according to their charges and availability.
+
+
+Definitions:
+				OPB --> 	Online Pandit/Priest Booking
+				SRS --> 	Software Requirement Specification
+				GUI---> 	Graphical User Interface
+				Portal-->    Personalized Website
+				End-user-->   user who is going to use the website for booking priest	
+				RDBMS -->    Relational Dadabase Management portal.
+
+
+
+Overview:
+	This portal provides flexibility to end-user to book priest for any occasions accordingly with respect to 
+	type of occasion, and availability of priests just by sitting at home, without going out.         
+
+Additional Information:
+		This website gives surity for security of data of user during user registration and authentication.
+		also it provides you with some discounts on booking a priest depending on various seasons and offers.
+		Mahurat information can also be viewed in the site.
+	
+General Description:
+	The online priest booking portal will help the people by reducing the chaos of going out and finding any priest 
+	in 11th hour (specially in new city). anytime and anywhere ,anyone can access to the website and book accordingly.
+	
+	
+	
+Functional Requirement:
+	This section provides requirement overview of the portal. Various functional modules that can be implemented by 
+	the portal will be-
+	
+	
+	1)user registration
+	2)type of occasion
+	3)priest according to occasion
+	4)booking procedure
+	5)payment processing
+	6)Authentication and authorization
+	
+	
+Description:
+Registration: 		if user wants to book any priest then he/she must be registered. Unregistered user can not get to access to portal.
+Login: 				User logins to the portal by entering valid user id and password for moving further.
+					End User can Browse various occasions , their categories as well, user can save to their wishlist.
+Payment for user: 	there are many of secure billing will be prepaid only via debit or credit cart,postpaid payment will not by available.
+Logout: 			After the payment ,the user will logged out.
+					Report Generation after all transation the portal can generate the portable file along with priest details (.pdf)
+					then sent one copy to user's Email- address and 
+					another one for the portal database to calculate the monthly transaction.
+					The term client/server refers primarily to an architecture or logical division of responsibilities, 
+					the client is the application (also known as the front-end), and the server is the RDBMS (also known as the back-end).
+					A client/server portal is a distributed portal in which,Some sites are client sites and others are server sites.
+					All the data resides at the server sites.
+					All applications execute at the client sites.
+        
+
+Technical Issues:
+	This portal will work on client-Server architecture. It will require an internet server.
+	The portal should support some commonly used browser such as Chrome etc.
+	Interface Requirement Various interfaces for the portal could be 
+	1.Login Page, 
+	2.Registration form
+    
+	There will be a screen displaying information about various occasions (religious events) .
+
+	The user may select the different options which will be open in another screen as
+		1.Login Page
+		2.Registration Form
+		3.Priest information page
+		4.Booking details 
+                5.date and time of puja/ceremony
+                6.Booking history
+                7.Account  Settings
+                8.Payment Gateways
+	
+ Hardware Interface:
+		
+ Software Interface:
+	http://www.mypanditji.com
+	http://www.priestbooking.com
+        At the end ,user need web browser for interact with the portal.
+
+
+Performance Requirement:
+	There is no  performance requirement in this portal, because the server request  and respone to client is totally based on internet connection of enduser.
+
+Design Constrains:
+	
+
+Non-Functional Requirements
+
+1.Security:
+	  SSL
+	The portal use SSL (Secure Socket Layer) in all trancations that include any confidential user information.
+	The portal must automcatically log out all user after a period of inactivity.
+	The portal should not leave any cookies on the user's computer containing user's password.
+	The portal's back-end servers shall  only be accessible to authenticated administrators.
+	Sensitive data will be encrypted  before being sent onver insecure connections like internet.
+        The proper firewalls should be developed to avoid intrusions from the internal or external sources.
+
+
+2.Reliability:
+	The portal provides storage of all databases on redundant computers with  automatic switchover. 
+	The main pillar of reliability of the portal  is the backup of the database 
+	which is continously maintained and updated to reflect  the most recent changes.
+
+
+3: Availability:
+	The portal should be available at all times. means the user can access it using web browser, 
+        only restricted by the down time of the server on which the portal runs.
+        In case of a of a hardware failure or database corruption, a replacement page will be shown. 
+	uptime : It mean 24 * 7 availability
+	100%--------------
+	99.9%
+	99.999%
+	99.9999%
+
+
+4: Maintainability:
+	A commercial database is used for maintaining the databae and application server takes care of the site. 
+	The maintainability can be done efficiently.
+
+5.Portability:
+	The application is HTML and scripting language based (Javascript). So the end user part is fully portable and any portal using 
+	any web browser should be able to use the features of the portal,including any hardware platform that is available 
+	or will be available in the futuer. 
+	An end-user  is used this portal on an OS;either it is Windows or Linux.
+	The portal shall run on PC, Laptops and PDA.etc.
+	The  technology should be transferable to different environments easily.
+
+6.Accessibility:
+        Only registered user should be allowed to process the orders after authentications.
+        Only GUI access of the portal should be permited to end user.
+
+7.Policies:
+       The portal should aware to all the legal formalities of the particular countries.
+       The portal should maintain security related to sensitive data.
+
+8.Efficiency:
+	The portal should provide good throughput and response to multiple user without burdening the portal by using appropriate number of servers.
+
+9.Safety:
+      Software should not harm ethical and environmental conditions of the end user machine.
+
+10.Modulariy:
+      The portal should have user friendly interface. 
+      It should be easily updated,modified and reused. 
+
+
+Operational Scenario:
+		
+Preliminary Schedule: :
+
+	
+	

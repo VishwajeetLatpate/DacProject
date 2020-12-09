@@ -1,0 +1,94 @@
+CREATE TABLE Client
+( Client_id int NOT NULL,
+  Client_name varchar(255) NOT NULL,
+  Client_email varchar(255), 
+  city varchar(255) NOT NULL,
+  CONSTRAINT pk_Client PRIMARY KEY (Client_id)
+);
+
+
+ CLIENT_ID CLIENT_NAME          CLIENT_EMAIL         CITY
+---------- -------------------- -------------------- ----------
+         1 Rahul                1@gmail.com          Pune
+         2 Varun                2@gmail.com          Pune
+         3 Param                3@gmail.com          Pune
+         4 Preeti               4@gmail.com          Pune
+         5 Karun                5gmail.com           Pune
+         6 Dhawan               6gmail.com           Pune
+         7 Rakul                7mail.com            Pune
+         8 Aryan                8@gmail.com          Pune
+
+CREATE TABLE Priest
+( Speciality_id number(4) NOT NULL,
+  Priest_name varchar2(20) NOT NULL,
+  Priest_email varchar2(20),
+  city varchar2(10) NOT NULL,
+  CONSTRAINT Priest_pk PRIMARY KEY (Speciality_id)
+);
+
+
+SPECIALITY_ID PRIEST_NAME          PRIEST_EMAIL         CITY
+------------- -------------------- -------------------- ----------
+          101 Ramesh               101@gmail.com        Pune
+          102 Vinayak              102@gmail.com        Pune
+          103 Ganesh               103@gmail.com        Pune
+          104 Dharmesh             104@gmail.com        Pune
+          105 Karun                105@gmail.com        Pune
+
+
+CREATE TABLE Event
+( Speciality_id number(10) NOT NULL,
+  Event_name varchar2(50) NOT NULL,
+  price number(10) NOT NULL,
+  CONSTRAINT FK_Event FOREIGN KEY (Speciality_id)
+);
+
+
+SPECIALITY_ID EVENT_NAME                                              PRICE
+------------- -------------------------------------------------- ----------
+          101 Vastu Pooja                                              3500
+          102 Vivah                                                    5000
+          103 Laxmi Pooja                                              2000
+          104 Durga Pooja                                              2000
+          105 Satyanarayana Pooja                                      2000
+
+
+CREATE TABLE admin
+( admin_id number(4) NOT NULL,
+  admin_name varchar2(20) NOT NULL,
+  admin_email varchar2(20),
+  CONSTRAINT admin_pk PRIMARY KEY (admin_id)
+);
+
+  ADMIN_ID ADMIN_NAME           ADMIN_EMAIL
+---------- -------------------- --------------------
+      1040 Vishwajeet           1040@gmail.com
+      1010 Ankit                1010@gmail.com
+      1121 Arnav                1121@gmail.com
+
+
+
+CREATE TABLE Booking
+( user_name varchar2(20) NOT NULL,
+  Event_name varchar2(20) NOT NULL,
+  Speciality_id number(4) NOT NULL,
+  Priest_name varchar2(20) NOT NULL,
+  Priest_email varchar2(20),
+  Event_Date Date, 				   
+  Booking_Date Date,
+  Total_amount number(6)
+);
+
+USER_NAME            EVENT_NAME           SPECIALITY_ID PRIEST_NAME          PRIEST_EMAIL         EVENT_DAT BOOKING_D TOTAL_AMOUNT
+-------------------- -------------------- ------------- -------------------- -------------------- --------- --------- ------------
+Rahul                Vastu Pooja                    101 Ramesh               101@gmail.com        01-JAN-21 02-JAN-21         3500
+
+			  
+
+
+
+
+
+
+
+
